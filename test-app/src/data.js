@@ -1,0 +1,1 @@
+export let nombres = ['Antonio', 'Sergio', 'Alfredo', 'Manuel', 'Diego', 'Arian'];
