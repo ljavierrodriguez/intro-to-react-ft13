@@ -5,14 +5,25 @@ import PropTypes from 'prop-types';
 
 import { nombres } from './data';
 import List from './components/List';
+import ListItem from './components/ListItem';
+import Layout from './components/Layout';
 
 export default function Home(props) {
     return (
-        <>
-            <Navbar />
+        <Layout>
             <h1><MdPets /> Hola, {props.name}</h1>
-            <List nombres={nombres} />
-        </>
+            <List>
+                {
+                    nombres.map((nombre, index) => {
+                        return (
+                            <ListItem key={index}>
+                                {nombre}
+                            </ListItem>
+                        )
+                    })
+                }
+            </List>
+        </Layout>
     )
 }
 

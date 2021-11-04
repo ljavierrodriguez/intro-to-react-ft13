@@ -1,7 +1,11 @@
 import React from 'react';
 
-export default function ListItem(props) {
+const ListItem = ({ children }) => {
     return (
-        <li className="list-group-item">{props.text}</li>
+        <li className="list-group-item list-group-item-action">
+            {children}
+        </li>
     )
 }
+
+export default ListItem;
